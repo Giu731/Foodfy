@@ -1,0 +1,117 @@
+/* div.error{
+    background-color: tomato;
+    padding: 4px;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+} */
+
+/* Users List */
+.mainHead{
+    margin-top: 54px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainHead h3{
+    font-size: 24px;
+}
+
+.mainHead a{
+    width: 137px;
+    text-align: center;
+}
+
+section.users_list{
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 200px;
+}
+
+section .user_listed{
+    margin-bottom: 50px;
+}
+
+section .user_listed .nameUser{
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 4px;
+    font-weight: initial;
+}
+
+section .user_listed .emailUser{
+    font-size: 14px;
+    color: #777777;
+    line-height: 17px;
+    margin-bottom: 16px;
+}
+
+section .user_listed .footer.list{
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+section .user_listed .footer.list a{
+    text-decoration: none;
+    color: #6558C3;
+}
+
+section .user_listed .footer.list form button{
+    margin-left: 16px;
+    color: #F55A5A;
+    background-color: initial;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* CREATING NEW USER */
+section.Page div.Head .headButton button{
+    width: 134px;
+    
+}
+section.Page div.Head .headButton button[id="recipe"]{
+    width:148px;
+}
+
+section.Page div.Head .headButton a{ 
+    background-color: initial;
+    padding: initial;
+}
+
+section.Page div.Head .headButton a button{
+    width: 134px;
+    background-color: #8A8A8A;
+    margin-left: 16px;
+}
+
+.fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
+
+
+.fields .item:last-child div{
+    display: flex;
+    justify-content: flex-start;
+}
+
+section.Page div.fields .item div#is_admin{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+section.Page div.fields .item div#is_admin input{
+    padding: initial;
+    width:initial;
+    margin-right: 8px;
+    margin-top: 0;
+}
+
+section.Page div.fields .item div#is_admin input[id="false"]{
+    visibility: hidden;
+}

@@ -1,0 +1,23 @@
+{% extends "admin/layout_admin.njk" %}
+
+{% block head %}
+    <title>{{user.name}} - Foodfy</title>
+{% endblock head %}
+
+
+{% block content %}
+<main>
+    <form class = "Create user" method = "POST" action = "/admin/profile?_method=PUT">
+        <section class="Page">
+            <div class = "Head">
+                <h3>Bem vindo(a) {{user.name}}</h3>
+                <span><button type = "submit">Salvar</button></span>
+            </div>
+            <div class = "fields">
+            {% include 'admin/profile/fields_Profile.njk' %}
+
+            </div>
+        </section>
+    </form>
+</main>
+{% endblock content %}

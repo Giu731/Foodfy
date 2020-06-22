@@ -1,0 +1,8 @@
+section.Page div.Head{
+    display: flex;
+    justify-content: space-between;
+}
+
+section.Page div.Head .headButton span button[type="submit"]{
+    margin-left:16px;
+}

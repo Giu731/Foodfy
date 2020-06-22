@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        {% include "parts/styles.njk" %}
+
+    {% block head %}
+        <title>Sessão - Foodfy</title>
+    {% endblock %}
+     </head>
+
+    <body>
+    <div class = message-container>
+        {% include "parts/messages.njk" %}
+    </div>
+    {% block header %}
+    <header class = "session">
+        <nav class="links">
+            <a href="/" >
+                <div class="logo">
+                    <img src="/logo.png" 
+                    alt="logofoodfy" > 
+                </div>
+            </a>
+        </nav>    
+    </header>
+    {% endblock header %}
+        
+        {% block content %}{% endblock %}
+
+        <script >
+            const message_container = document.querySelector('.message-container')
+            console.log(message_container)
+            const ErrorMessages = message_container.querySelector('.messages.error')
+            console.log(ErrorMessages)
+            const fields = document.querySelector('.fields')
+            const items = document.querySelectorAll('.item')
+            console.log(items)
+            for(item of items){
+                console.log(item)
+                const inputBorder = item.querySelector('input')
+                console.log(inputBorder)
+                if(ErrorMessages){
+                inputBorder.style.borderColor = "red"
+                } 
+            }
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,38 @@
+{% extends "admin/layout_admin.njk" %}
+
+{% block head %}
+    <title>Chefs - Foodfy</title>
+{% endblock head %}
+
+
+{% block content %}
+<main>
+<div class = "mainHead">
+    <h3>Gerenciar chefs</h3>
+    {% if session.is_admin == true %}
+    <a href = "/admin/chefs/create" >Novo</a>
+    {% endif %}
+</div>
+<section class="chefs_admin">
+    {% for chef in chefResults %}
+        <div class="chef_admin" id="{{item.id}}">
+            <span>
+                <div class="fotoChef">
+                    <img src="{{chef.avatar}}" alt="foto do chef:{{chef.name}}">
+                </div>
+            </span>
+            <span>
+                <div class="nomeChef">
+                    <h3>{{chef.name}}</h3>
+                </div>
+                <a href = "/admin/chefs/{{chef.id}}">Visualizar</a>
+            </span>
+        </div>
+    {% endfor %}
+</section>
+    
+</main>
+{% endblock content %}
+
+
+ 

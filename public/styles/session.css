@@ -1,0 +1,67 @@
+header.session nav{
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
+}
+
+header.session .links a{
+    margin-left: 0;
+}
+
+header.session div.logo{
+    margin:0;
+}
+
+
+section.login .Head{
+    margin-top: 146px;
+    display: flex;
+    justify-content: center;
+}
+
+section.login .Head h3{
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 25px;
+}
+
+section.login .fields{
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
+    padding-right: 200px;
+    /* width: 500px; */
+}
+
+section.login .fields .item.error input{
+    border-color: red;
+}
+
+.Session section.login .footer ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.Session section.login .footer ul li:first-child{
+    margin-top: 10px;
+    /* align-self: center; */
+}
+
+.Session section.login .footer ul li a{
+    font-size: 16px;
+    color: #969696;
+    text-decoration: none;
+    text-align: center;
+}
+
+.Session section button{
+    width: 134px;
+    align-self: flex-end;    
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+
+

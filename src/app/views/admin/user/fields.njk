@@ -1,0 +1,60 @@
+<div class = "item">
+    <div>Nome</div>
+    <div>    
+        <input
+            type = "text"
+            name = "name"
+            value = "{{user.name}}"
+        >
+    </div>
+</div>
+
+<div class = "item">
+    <div>Email</div>
+    <div>    
+        <input
+            type = "email"
+            name = "email"
+            value = "{{user.email}}"
+            onblur = "Validate.apply(this, 'isEmail')"
+        >
+    </div>
+</div>
+
+<div class = "item">
+    <div id = "is_admin"> 
+    {% if userId %}
+        <input
+            type = "radio"
+            name = "is_admin"
+            value = "true"
+            {% if user.is_admin == true %}
+            checked
+            {% endif %} 
+        >Administrador
+        <input
+            type = "radio"
+            name = "is_admin"
+            value = "false"
+            {% if user.is_admin ==false %}
+            checked
+            {% endif %}
+        >Administrador
+    {% else %}
+        <input
+            type = "radio"
+            name = "is_admin"
+            value = "true"
+        >Administrador
+        <input
+            type = "radio"
+            id="false"
+            name = "is_admin"
+            value = "false"
+            checked
+        >
+    {% endif %}   
+        
+        
+    </div>
+</div>

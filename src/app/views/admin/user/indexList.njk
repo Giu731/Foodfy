@@ -1,0 +1,41 @@
+{% extends "admin/layout_admin.njk" %}
+
+{% block head %}
+    <title>Usuários - Foodfy</title>
+{% endblock head %}
+
+
+{% block content %}
+<main class = "list">
+<div class = "mainHead">
+    <h3>Usuários</h3>
+    {% if session.is_admin == true %}
+    <a href = "/admin/users/register" >Novo</a>
+    {% endif %}
+</div>
+<section class="users_list">
+    {% for user in users %}
+        <div class="user_listed" id="{{user.id}}">
+            <div class = "nameUser">
+                <h3>{{user.name}}</h3>
+            </div>
+            <div class = "emailUser">
+                <p>{{user.email}}</p>
+            </div>
+            <div class = "footer list">
+                <a href = "/admin/users/{{user.id}}">Editar</a>
+                <form id = "form-delete-list" method = "POST" action = "/admin/users?_method=DELETE">
+                    <input
+                        type = "hidden",
+                        name = "id",
+                        value = {{user.id}}>
+                    <button id = "delete-list" type = "submit">Remover</button>
+                </form>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+    
+</main>
+{% endblock content %}
+
