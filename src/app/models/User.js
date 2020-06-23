@@ -75,12 +75,6 @@ module.exports = {
 
         const resultsFile = recipes.map(recipe => File.takeFiles(recipe.id))
         let promiseResults = await Promise.all(resultsFile)
-        // for(file of resultsFile){
-        //     const fileId = file.file_id
-        //     File.deleteFromRecipeFiles(fileId)
-
-        //     File.deleteFromFiles(fileId)
-        // }  
         console.log(promiseResults)
 
         await db.query('DELETE FROM users WHERE id = $1', [id])

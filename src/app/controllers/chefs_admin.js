@@ -61,7 +61,7 @@ module.exports = {
             let files = resultsFileChef.rows
             files = files.map(file => ({
                 ...file,
-                src: `http://${req.headers.host}${file.path.replace("public","")}`
+                src: `${req.protocol}://${req.headers.host}${file.path.replace("public","")}`
             }))
             console.log(files[0].src)
             chef = {
@@ -106,7 +106,6 @@ module.exports = {
         })
     },
     edit(req, res){
-        console.log(`existe req.files no edit: ${req.files}`)
         Chef_admin.find(req.params.id, async function(chef){
             if(!chef) return res.send("Chef not found")
 
@@ -129,11 +128,9 @@ module.exports = {
             }
         }       
         if(req.files.length !=0 ){
-            console.log("chego até aqui")
             const newFilesPromise = req.files.map(file => File.create({...file}))
             const resultsFile = await (await Promise.all(newFilesPromise)).map(file => file.rows[0].id)
             newFileId = resultsFile[0]
-            console.log(`o novo fileId é:${newFileId}`)
             req.body.file_id = newFileId
             
             await Chef_admin.update(req.body)
@@ -158,7 +155,6 @@ module.exports = {
     },
     delete(req, res){
         //check for recipes
-        console.log(req.body)
         Chef_admin.showRecipes(req.body.id, function(recipes){
             if(recipes.length != 0 ) return res.render('admin/chefs/edit',{
                 chef: req.body,

@@ -196,8 +196,7 @@ const AvatarUpload = {
         input.name = "avatar"
         div.appendChild(input)
         input.value = `${image.src}`
-        // div.appendChild(image)
-        console.log(`essa é a ${image.url}`)
+      
 
         return div
     },
@@ -288,6 +287,6 @@ const Validate = {
         }
     }
 }
-const formUser = document.querySelectorAll('.Session.user'),
+
 
 

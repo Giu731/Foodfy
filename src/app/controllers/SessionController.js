@@ -69,7 +69,7 @@ module.exports = {
                 html: `<h2>Esqueceu a senha?</h2>
                 <p>Clique no link abaixo para criar uma nova senha</p>
                 <p>
-                    <a href="http://localhost:3000/admin/users/password-reset?token=${token}" target="_blank>
+                    <a href="http://localhost:3000/admin/users/password-reset?token=${token}" target="_blank">
                     Recuperar senha
                     </a>
                 </p>

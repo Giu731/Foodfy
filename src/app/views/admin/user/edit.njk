@@ -7,7 +7,6 @@
 
 {% block content %}
 <main>
-    <form class = "Create user" method = "POST" action = "/admin/users?_method=PUT">
         <section class="Page">
             <div class = "Head">
                 <span>Atualizando Usuário</span>
@@ -19,13 +18,14 @@
                             value = {{user.id}}>
                         <button id = "delete" type = "submit">Deletar</button>
                     </form>
-                    <span><button type = "submit">Salvar</button></span>
+                    <span><button id = "recipe" form = "update" type = "submit">Salvar</button></span>
                 </div>
             </div>
+            <form class = "Create user" id="update" method = "POST" action = "/admin/users?_method=PUT">
             <div class = "fields">
             {% include 'admin/user/fields.njk' %}
             </div>
+            </form>
         </section>
-    </form>
 </main>
 {% endblock content %}

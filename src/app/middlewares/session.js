@@ -27,7 +27,7 @@ async function OnlyAdmin(req, res, next){
 }
 
 async function OwnerUserRecipe(req, res, next){
-    const recipeId = req.params.id
+    const recipeId = req.params.id || req.body.id
     console.log(recipeId)
     Recipe_admin.find(recipeId, function(recipe){
         if(!req.session.userId){

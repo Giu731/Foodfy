@@ -157,7 +157,6 @@ module.exports = {
                         ...chef,
                         avatar: files
                     }
-                    console.log(chefFinal.avatar_url)
                     chefResults.push(chefFinal)
                 }
                 return res.render("chefs", {chefs: chefResults})
