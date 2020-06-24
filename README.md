@@ -25,12 +25,12 @@ Ele consiste em um protótipo de site de receitas, chamado <strong>Foodfy</stron
 <h3>Testando o site</h3>
 <strong>1. Antes de executar a aplicação são necessários alguns programas:</strong>
 <ul>
-  <li>Node_modules (npm install)</li>
-  <li>Express (npm install express)</li>
+ <li>Node_modules (npm install)</li>
+ <li>Express (npm install express)</li>
   <li>Nodemon (npm install -D nodemon)</li>
-  <li>Nunjucks(npm install nunjucks)</li>
+  <li>Nunjucks (npm install nunjucks)</li>
   <li>Browsersync (npm install browser-sync)</li>
-  <li>Method Override(npm install method-override)</li>
+  <li>Method Override (npm install method-override)</li>
   <li>PostgreSQL (npm install pg)</li>
   <li>Multer (npm install multer)</li>
   <li>Express session (npm install express-session connect-pg-simple)</li>
