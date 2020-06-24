@@ -1,36 +1,37 @@
 {% extends "admin/layout_admin.njk" %}
 
 {% block head %}
-    <title>Criar nova receita - Foodfy</title>
+    <title>Criar novo usuário - Foodfy</title>
 {% endblock head %}
 
 
 {% block content %}
 <main>
-    <form class = "Create user" method = "POST" {if userId action = "/admin/users" else action = "/admin/users/register"}>
         <section class="Page">
             <div class = "Head">
                 <h3>Criar Usuário</h3>
                 <div class = "headButton">
-                    <span><button type = "submit">Salvar</button></span>
+                    <span><button id = "recipe" form = "update">Salvar</button></span>
                     <span>
                     {# ARRUMAR O BOTÃO DE CANCELAR #}
-                    {% if userId %}
-                        <a href = "/admin/users/list">
+                    {% if session.userId %}
+                        <a href = "/admin/users/">
                             <button>Cancelar</button>
                         </a>
                     {% else %}
-                        <a href = "/">
+                        <a href = "/admin/users/login">
                             <button>Cancelar</button>
                         </a>
                     {% endif %}
                     </span>
                 </div>
             </div>
-            <div class = "fields">
-            {% include 'admin/user/fields.njk' %}
-            </div>
+            <form class = "Create user" id="update" method = "POST" {if session.userId action = "/admin/users" else action = "/admin/users/register"}>
+                <div class = "fields">
+                {% include 'admin/user/fields.njk' %}
+                </div>
+            </form>
         </section>
-    </form>
+   
 </main>
 {% endblock content %}

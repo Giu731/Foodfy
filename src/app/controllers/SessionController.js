@@ -7,6 +7,7 @@ const User = require('../models/User')
 module.exports = {
     login(req, res){
         req.session.userId = req.user.id
+        console.log(req.session.userId)
         req.session.is_admin = req.user.is_admin
         return res.redirect("/admin/profile")
     },

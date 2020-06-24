@@ -30,7 +30,7 @@ routes.get('/:id', OwnerUser, UserController.edit)
 
 routes.get('/create', OnlyAdmin, UserController.create) // Redirecionamento do botão NOVO
 
-routes.post('/', UserController.post) //Cadastrar um usuário
+routes.post('/', UserValidator.post, UserController.post) //Cadastrar um usuário
 routes.put('/', UserValidator.update, UserController.put) // Editar um usuário
 routes.delete('/', DoNotDeleteAdmin, UserController.delete) // Deletar um usuário
 

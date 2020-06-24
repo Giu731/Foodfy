@@ -1,10 +1,4 @@
 module.exports = {
-    foundIndexF(array, index){
-        for(i=0; i<array.length; i++){
-            if(array[i] == index)
-            return array[i]
-        }
-    },
     date(timestamp){
         const date = new Date(timestamp)
 
