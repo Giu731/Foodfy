@@ -25,16 +25,16 @@ Ele consiste em um protótipo de site de receitas, chamado <strong>Foodfy</stron
 <h3>Testando o site</h3>
 <strong>1. Antes de executar a aplicação são necessários alguns programas:</strong>
 <ul>
- <li>Node_modules (npm install)</li>
- <li>Express (npm install express)</li>
-  <li>Nodemon (npm install -D nodemon)</li>
-  <li>Nunjucks (npm install nunjucks)</li>
-  <li>Browsersync (npm install browser-sync)</li>
-  <li>Method Override (npm install method-override)</li>
-  <li>PostgreSQL (npm install pg)</li>
-  <li>Multer (npm install multer)</li>
-  <li>Express session (npm install express-session connect-pg-simple)</li>
-  <li>NodeMailer (npm install nodemailer)</li>
+ <li>Node_modules <em>(npm install)</em></li>
+ <li>Express <em>(npm install express)</em></li>
+  <li>Nodemon <em>(npm install -D nodemon)</em></li>
+ <li>Nunjucks <em>(npm install nunjucks)</em></li>
+  <li>Browsersync <em>(npm install browser-sync)</em></li>
+ <li>Method Override <em>(npm install method-override)</em></li>
+  <li>PostgreSQL <em>(npm install pg)</em></li>
+ <li>Multer <em>(npm install multer)</em></li>
+ <li>Express session <em>(npm install express-session connect-pg-simple)</em></li>
+ <li>NodeMailer <em>(npm install nodemailer)</em></li>
 </ul>
 
 Sei que são muitos programas, mas eles vão permitir que o site faça tudo o que deve fazer.
@@ -49,7 +49,8 @@ Eu utilizei o PostBird.
 
 <strong>3. Começando com dados</strong>
 Depois de já ter criado o database, no teminal onde rodará o programas, rodar o <strong>seeds.js</strong> (node seeds.js), para assim já começar com alguns dados no site.
-<strong>Obs:</strong> A senha dos primeiros usuários, criados pelo seeds, é a mesma: <strong>1234</strong>
+<strong>
+ </br>Obs:</strong> A senha dos primeiros usuários, criados pelo seeds, é a mesma: <strong>1234</strong>
 
   
   
