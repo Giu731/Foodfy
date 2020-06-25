@@ -51,6 +51,12 @@ Eu utilizei o PostBird.
 Depois de já ter criado o database, no teminal onde rodará o programas, rodar o <strong>seeds.js</strong> (node seeds.js), para assim já começar com alguns dados no site.
 <strong>
  </br>Obs:</strong> A senha dos primeiros usuários, criados pelo seeds, é a mesma: <strong>1234</strong>
+ 
+ </br></br>
+ 
+ <h3>Aviso Importante</h3>
+ As primeiras fotos serão todas as mesmas, vindas de um mesmo path. Portanto, quando for feito o teste com as receitas e os chefs, caso a imagem seja apagada, todos ficarão sem imagem. Porém, isso não acontecerá quando você criar suas receitas e seus chefs, adicionando mais imagens ao banco de dados.
+ 
 
   
   
