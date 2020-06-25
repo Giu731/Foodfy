@@ -18,6 +18,12 @@ async function createUsers(){
     const users = []
     const password = await hash('1234', 8) //senha pré-determinada para os cinco primeiros users
     
+    users.push({             //forçar pelo menos um administrador
+        name: faker.name.firstName(),
+        email: faker.internet.email(),
+        password,
+        is_admin: true
+    })
     while(users.length < totalUsers){
         users.push({
             name: faker.name.firstName(),
